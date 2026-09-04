@@ -5693,3 +5693,84 @@ a,
    END
    ========================================================================= */
 
+/* =========================================================================
+   PREVIOUS EVENTS — DOSSIER TOPBAR FIX
+   ========================================================================= */
+
+.event-archive-viewer .dossier-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 55px 0 14px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(4,4,4,1) 0%,
+        rgba(4,4,4,.98) 70%,
+        transparent 100%
+    );
+}
+
+.event-archive-viewer .dossier-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 14px;
+
+    color: var(--c-text-dim);
+    background: rgba(10,10,10,.95);
+
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-xs);
+
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.event-archive-viewer .dossier-back::before {
+    content: "←";
+    color: var(--c-crimson-bright);
+    font-size: 14px;
+}
+
+.event-archive-viewer .dossier-back:hover {
+    color: var(--c-white);
+    border-color: var(--c-crimson-bright);
+    background: rgba(184,34,31,.08);
+}
+
+.event-archive-viewer .dossier-topbar-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--c-text-faint);
+
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.event-archive-viewer .dossier-topbar-label::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--c-crimson-bright);
+    box-shadow: 0 0 8px rgba(229,56,42,.5);
+}
